@@ -11,14 +11,23 @@ abstract class AbstractManager
 
     public function __construct()
     {
+        // Paramètres de connexion spécifiques à 3WA
+        $host = "db.3wa.io";
+        $port = "3306";
+        $dbname = "camillemounier_crud_mvc";
+        $user = "camillemounier";
+        $password = "922b2543764177289574eb62d821c069";
+
+        $connexionString = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8";
+
         try {
             $this->db = new PDO(
-                'mysql:host=localhost;dbname=camillemounier_crud_mvc;charset=utf8',
-                'camillemounier', // Remplace par ton utilisateur MySQL
-                '922b2543764177289574eb62d821c069', // Remplace par ton mot de passe MySQL
+                $connexionString,
+                $user,
+                $password,
                 [
-                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Active le mode exception en cas d'erreur
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // Retourne les résultats sous forme de tableaux associatifs
                 ]
             );
         } catch (PDOException $e) {

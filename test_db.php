@@ -8,9 +8,10 @@ class TestManager extends AbstractManager
 {
     public function testConnection()
     {
-        return "Connexion réussie !";
+        return "Connexion réussie à la base de données !";
     }
 }
 
 $test = new TestManager();
 echo $test->testConnection();
+?>
