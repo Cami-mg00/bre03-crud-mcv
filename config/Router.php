@@ -6,6 +6,12 @@ use Controllers\UserController;
 
 class Router
 {
+    // Le constructeur vide
+    public function __construct()
+    {
+        // Rien à initialiser pour le moment
+    }
+     // Méthode pour gérer les requêtes
     public function handleRequest(array $get): void
     {
         // Instancie le UserController
