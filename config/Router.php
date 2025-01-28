@@ -20,25 +20,25 @@ class Router
         // Vérifie la route demandée
         if (isset($get["route"]) && $get["route"] === "show_user") {
             // Appelle la méthode show()
-            // $controller->show(); // Plus tard
+             $controller->show();
         } elseif (isset($get["route"]) && $get["route"] === "create_user") {
             // Appelle la méthode create()
-            // $controller->create(); // Plus tard
+            $controller->create();
         } elseif (isset($get["route"]) && $get["route"] === "check_create_user") {
             // Appelle la méthode checkCreate()
-            // $controller->checkCreate(); // Plus tard
+            $controller->checkCreate();
         } elseif (isset($get["route"]) && $get["route"] === "update_user") {
             // Appelle la méthode update()
-            // $controller->update(); // Plus tard
+            $controller->update();
         } elseif (isset($get["route"]) && $get["route"] === "check_update_user") {
             // Appelle la méthode checkUpdate()
-            // $controller->checkUpdate(); // Plus tard
+            $controller->checkUpdate();
         } elseif (isset($get["route"]) && $get["route"] === "delete_user") {
             // Appelle la méthode delete()
-            // $controller->delete(); // Plus tard
+            $controller->delete();
         } else {
             // Dans tous les autres cas, liste les utilisateurs
-            // $controller->list(); // Plus tard
+            $controller->list();
         }
     }
 }
