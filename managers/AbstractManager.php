@@ -14,9 +14,10 @@ abstract class AbstractManager
         // Paramètres de connexion spécifiques à 3WA
         $host = "db.3wa.io";
         $port = "3306";
-        $dbname = "camillemounier_crud_mvc";
+        $dbname = "camillemounier_crud_mcv";
         $user = "camillemounier";
         $password = "922b2543764177289574eb62d821c069";
+
 
         $connexionString = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8";
 
