@@ -63,3 +63,5 @@ class UserController
         echo "Suppression d'un utilisateur";
     }
 }
+
+?>

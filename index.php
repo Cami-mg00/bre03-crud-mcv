@@ -10,3 +10,5 @@ $router = new Router();
 
 // Gérer la requête
 $router->handleRequest($_GET);
+
+?>
